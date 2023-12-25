@@ -36,3 +36,31 @@ export const deleteContact = createAsyncThunk<void, string>(
     await axiosApi.delete(`/contacts/${id}.json`);
   }
 );
+
+export const fetchOneContact = createAsyncThunk<ContactMutation, string>(
+  "contacts/edit",
+  async (id: string) => {
+    const response = await axiosApi.get<ContactMutation | null>(
+      `/contacts/${id}.json`
+    );
+    const contact = response.data;
+
+    if (contact === null) {
+      throw new Error("Not Found");
+    }
+
+    return contact;
+  }
+);
+
+interface UpdateContactParams {
+  id: string;
+  contact: ContactMutation;
+}
+
+export const updateContact = createAsyncThunk<void, UpdateContactParams>(
+  "dishes/update",
+  async ({ id, contact }) => {
+    await axiosApi.put(`/contacts/${id}.json`, contact);
+  }
+);
