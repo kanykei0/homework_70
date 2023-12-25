@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new-contact" element={<NewContact />} />
+          <Route path="*" element={<h1>Not Found!</h1>} />
         </Routes>
       </div>
     </>

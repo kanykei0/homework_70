@@ -5,3 +5,7 @@
 .card_contact {
   max-width: 600px;
 }
+
+.modal-avatar {
+  width: 200px;
+}

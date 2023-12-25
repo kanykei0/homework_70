@@ -29,3 +29,10 @@ export const fecthAllContacts = createAsyncThunk<Contact[], undefined>(
     return newContacts;
   }
 );
+
+export const deleteContact = createAsyncThunk<void, string>(
+  "contacts/delete",
+  async (id: string) => {
+    await axiosApi.delete(`/contacts/${id}.json`);
+  }
+);
