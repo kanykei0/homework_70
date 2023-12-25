@@ -4,3 +4,7 @@ export interface Contact {
   email: string;
   avatar: string;
 }
+
+export interface ContactList {
+  [id: string]: Contact;
+}

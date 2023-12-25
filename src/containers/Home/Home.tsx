@@ -1,7 +1,9 @@
+import ContactList from "../../components/ContactList/ContactList";
+
 const Home = () => {
   return (
     <div>
-      <div>Home</div>
+      <ContactList />
     </div>
   );
 };
