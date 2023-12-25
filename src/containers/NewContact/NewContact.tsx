@@ -15,11 +15,7 @@ const NewContact = () => {
     navigate("/");
   };
 
-  return (
-    <div>
-      <ContactForm onSubmit={onSubmit} isLoading={createLoading} />
-    </div>
-  );
+  return <ContactForm onSubmit={onSubmit} isLoading={createLoading} />;
 };
 
 export default NewContact;

@@ -59,7 +59,7 @@ interface UpdateContactParams {
 }
 
 export const updateContact = createAsyncThunk<void, UpdateContactParams>(
-  "dishes/update",
+  "contacts/update",
   async ({ id, contact }) => {
     await axiosApi.put(`/contacts/${id}.json`, contact);
   }
