@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Toolbar from "./components/Toolbar/Toolbar";
 import Home from "./containers/Home/Home";
-import ContactForm from "./components/ContactForm/ContactForm";
+import NewContact from "./containers/NewContact/NewContact";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/new-contact" element={<ContactForm />} />
+          <Route path="/new-contact" element={<NewContact />} />
         </Routes>
       </div>
     </>
