@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Toolbar />
-      <div className="container">
+      <div className="container mt-5">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new-contact" element={<NewContact />} />
