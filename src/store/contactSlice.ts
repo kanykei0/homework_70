@@ -9,7 +9,7 @@ interface ContactsState {
   createLoading: boolean;
 }
 const initialState: ContactsState = {
-  items: null,
+  items: [],
   renderLoading: false,
   createLoading: false,
 };

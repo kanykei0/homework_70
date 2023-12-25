@@ -1,8 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Contact, ContactList } from "../types";
+import { Contact, ContactList, ContactMutation } from "../types";
 import axiosApi from "../axiosApi";
 
-export const createContact = createAsyncThunk<void, Contact>(
+export const createContact = createAsyncThunk<void, ContactMutation>(
   "contacts/create",
   async (contact) => {
     await axiosApi.post("/contacts.json", contact);

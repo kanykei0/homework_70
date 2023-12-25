@@ -21,8 +21,8 @@ const ContactList = () => {
       {contactsLoading ? (
         <Spinner />
       ) : contacts ? (
-        contacts.map((contact, index) => (
-          <ContactItem key={index} contact={contact} />
+        contacts.map((contact) => (
+          <ContactItem key={contact.id} id={contact.id} contact={contact} />
         ))
       ) : (
         <h4>Empty</h4>

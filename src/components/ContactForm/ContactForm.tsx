@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Contact } from "../../types";
+import { ContactMutation } from "../../types";
 import ButtonSpinner from "../Spinners/ButtonSppinner";
 import { Link } from "react-router-dom";
 
-const initialState: Contact = {
+const initialState: ContactMutation = {
   name: "",
   phone: "",
   email: "",
@@ -11,8 +11,8 @@ const initialState: Contact = {
 };
 
 interface Props {
-  onSubmit: (contact: Contact) => void;
-  existingContact?: Contact;
+  onSubmit: (contact: ContactMutation) => void;
+  existingContact?: ContactMutation;
   isEdit?: boolean;
   isLoading?: boolean;
 }
@@ -23,7 +23,7 @@ const ContactForm: React.FC<Props> = ({
   isEdit,
   isLoading,
 }) => {
-  const [contact, setContact] = useState<Contact>(existingContact);
+  const [contact, setContact] = useState<ContactMutation>(existingContact);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setContact((prev) => ({

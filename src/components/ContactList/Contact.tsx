@@ -3,13 +3,13 @@ import { Contact } from "../../types";
 import { Link } from "react-router-dom";
 
 interface Props {
-  //   id: string;
+  id: string;
   contact: Contact;
 }
 
-const ContactItem: React.FC<Props> = ({ contact }) => {
+const ContactItem: React.FC<Props> = ({ id, contact }) => {
   return (
-    <Link to={`/contacts/`}>
+    <Link to={`/contacts/${id}`}>
       <div className="card card_contact mb-3 shadow">
         <div className="card-body d-flex align-items-center p-2">
           <div>
